@@ -1,4 +1,5 @@
 import React from "react";
+import PropTypes from "prop-types";
 import DeleteIcon from "@material-ui/icons/Delete";
 
 function Note(props) {
@@ -16,5 +17,12 @@ function Note(props) {
     </div>
   );
 }
+
+Note.propTypes = {
+  title: PropTypes.string,
+  content: PropTypes.string,
+  id: PropTypes.string,
+  onDelete: PropTypes.func
+};
 
 export default Note;
